@@ -10,9 +10,9 @@ public class PlayerController : MonoBehaviour
     
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+       
 
         
     }
@@ -20,7 +20,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckInput();
+        if (Input.GetKeyDown("space"))
+        {
+            rb = GetComponent<Rigidbody2D>();
+        }
         
     }
     private void FixedUpdate()
